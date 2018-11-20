@@ -1,0 +1,19 @@
+Source: uni
+Section: perl
+Priority: optional
+Maintainer: David Nebauer <david@hezmana.cogito.loc>
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: libunicode-linebreak-perl,
+ perl
+Standards-Version: 4.2.1
+Homepage: https://metacpan.org/release/App-Uni
+
+Package: uni
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ libunicode-linebreak-perl
+Description: command-line utility to find or display Unicode characters
+ App::Uni installs a simple program, uni, that helps grepping through the
+ Unicode database included in the current Perl 5 installation.
+ .
+ For information on how to use uni consult the uni documentation.

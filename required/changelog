@@ -1,0 +1,7 @@
+uni (9.003-1) unstable; urgency=low
+
+  * Local package
+  * Initial release
+  * Closes: 500001
+
+ -- David Nebauer <david@hezmana.cogito.loc>  Tue, 20 Nov 2018 19:11:17 +0930

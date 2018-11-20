@@ -2,46 +2,46 @@ use strict;
 use warnings;
 package App::Uni;
 # ABSTRACT: command-line utility to find or display Unicode characters
-
-=encoding utf8
-
-=head1 NAME
-
-App::Uni - Command-line utility to grep UnicodeData.txt
-
-=head1 SYNOPSIS
-
-    $ uni smiling face
-    263A ☺ WHITE SMILING FACE
-    263B ☻ BLACK SMILING FACE
-
-    $ uni ☺
-    263A ☺ WHITE SMILING FACE
-
-    # Only on Perl 5.14+
-    $ uni wry
-    1F63C <U+1F63C> CAT FACE WITH WRY SMILE
-
-=head1 DESCRIPTION
-
-This module installs a simple program, F<uni>, that helps grepping through
-the Unicode database included in the current Perl 5 installation.
-
-For information on how to use F<uni> consult the L<uni> documentation.
-
-=head1 ACKNOWLEDGEMENTS
-
-This is a re-implementation of a program written by Audrey Tang in Taiwan.  I
-used that program for years before deciding I wanted to add a few features,
-which I did by rewriting from scratch.
-
-That program, in turn, was a re-implementation of a same-named program Larry
-copied to me, which accompanied Audrey for years.  However, that program was
-lost during a hard disk failure, so she coded it up from memory.
-
-Thank-you, Larry, for everything. ♡
-
-=cut
+$App::Uni::VERSION = '9.003';
+#pod =encoding utf8
+#pod
+#pod =head1 NAME
+#pod
+#pod App::Uni - Command-line utility to grep UnicodeData.txt
+#pod
+#pod =head1 SYNOPSIS
+#pod
+#pod     $ uni smiling face
+#pod     263A ☺ WHITE SMILING FACE
+#pod     263B ☻ BLACK SMILING FACE
+#pod
+#pod     $ uni ☺
+#pod     263A ☺ WHITE SMILING FACE
+#pod
+#pod     # Only on Perl 5.14+
+#pod     $ uni wry
+#pod     1F63C <U+1F63C> CAT FACE WITH WRY SMILE
+#pod
+#pod =head1 DESCRIPTION
+#pod
+#pod This module installs a simple program, F<uni>, that helps grepping through
+#pod the Unicode database included in the current Perl 5 installation.
+#pod
+#pod For information on how to use F<uni> consult the L<uni> documentation.
+#pod
+#pod =head1 ACKNOWLEDGEMENTS
+#pod
+#pod This is a re-implementation of a program written by Audrey Tang in Taiwan.  I
+#pod used that program for years before deciding I wanted to add a few features,
+#pod which I did by rewriting from scratch.
+#pod
+#pod That program, in turn, was a re-implementation of a same-named program Larry
+#pod copied to me, which accompanied Audrey for years.  However, that program was
+#pod lost during a hard disk failure, so she coded it up from memory.
+#pod
+#pod Thank-you, Larry, for everything. ♡
+#pod
+#pod =cut
 
 use 5.10.0; # for \v
 use warnings;
@@ -248,3 +248,70 @@ sub do_dwim {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+App::Uni - command-line utility to find or display Unicode characters
+
+=head1 VERSION
+
+version 9.003
+
+=head1 SYNOPSIS
+
+    $ uni smiling face
+    263A ☺ WHITE SMILING FACE
+    263B ☻ BLACK SMILING FACE
+
+    $ uni ☺
+    263A ☺ WHITE SMILING FACE
+
+    # Only on Perl 5.14+
+    $ uni wry
+    1F63C <U+1F63C> CAT FACE WITH WRY SMILE
+
+=head1 DESCRIPTION
+
+This module installs a simple program, F<uni>, that helps grepping through
+the Unicode database included in the current Perl 5 installation.
+
+For information on how to use F<uni> consult the L<uni> documentation.
+
+=head1 NAME
+
+App::Uni - Command-line utility to grep UnicodeData.txt
+
+=head1 ACKNOWLEDGEMENTS
+
+This is a re-implementation of a program written by Audrey Tang in Taiwan.  I
+used that program for years before deciding I wanted to add a few features,
+which I did by rewriting from scratch.
+
+That program, in turn, was a re-implementation of a same-named program Larry
+copied to me, which accompanied Audrey for years.  However, that program was
+lost during a hard disk failure, so she coded it up from memory.
+
+Thank-you, Larry, for everything. ♡
+
+=head1 AUTHOR
+
+Ricardo Signes <rjbs@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+
+Ricardo Signes has dedicated the work to the Commons by waiving all of his
+or her rights to the work worldwide under copyright law and all related or
+neighboring legal rights he or she had in the work, to the extent allowable by
+law.
+
+Works under CC0 do not require attribution. When citing the work, you should
+not imply endorsement by the author.
+
+=cut
